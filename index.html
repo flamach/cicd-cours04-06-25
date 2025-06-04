@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI-CD App</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Welcome to CI-CD App</h1>
+        <p>Your Express server is running!</p>
+        <div id="status">Connecting to server...</div>
+    </div>
+    
+    <script type="module">
+        // Test de connexion au serveur Express
+        fetch('/').then(response => response.text())
+            .then(data => {
+                document.getElementById('status').innerHTML = `✅ Server response: ${data}`;
+            })
+            .catch(error => {
+                document.getElementById('status').innerHTML = `❌ Server error: ${error}`;
+            });
+    </script>
+</body>
+</html>
