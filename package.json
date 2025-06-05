@@ -4,10 +4,12 @@
   "version": "0.0.0",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "lint": "eslint ."
   },
   "devDependencies": {
-    "vite": "^5.0.8"
+    "vite": "^5.0.8",
+    "eslint": "^8.56.0"
   },
   "dependencies": {
     "express": "^4.18.2"
